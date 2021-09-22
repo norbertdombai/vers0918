@@ -1,27 +1,48 @@
-var versObjektum = 
+var versObjektum = [
+    {
+        
+    cim: "A Hegyi Zsupsz<br>",
+ 
+    vers: "A Hegyi Zsupsz egy nagy, kövér <br> nehézkes léptű, lomha lény <br> és lenn a völgyben él szegény. <br> <br> A hegyre nem megy föl soha. <br> A Kőszáli Puff rokona. <br>\n\t",
     
-    [{
-        cim: "Lusták dala",
-        szerzo:"Tóth Krisztina",
-        vers: "Gyere lusta, feküdj mellém,<br>kezdjünk együtt lustálkodni,<br>és csak lógjunk itt egész nap,<br>mint kötélen fél pár zokni!<br><br>Gyere, bújj be mellém, lusta,<br>mondjuk el, mit nem csinálunk!<br>Most arról készüljön lista,<br>mi minden nem lesz ma nálunk!<br><br>Ez a lusták napja, vagy mi,<br>átalusszuk az egészet,<br>tessék minket békén hagyni,<br>ágyba kérjük az ebédet!<br>",
-        kep: 'kepek/lustakdala.PNG'
-    }];
-    
-    const elem=' <div class="elem"><h3></h3><p></p><p></p></div>';
-    
-    $(myfunction(){
-        for (let index = 0; index < versObjektum.length; index++) {
-            $("article").append(elem);
-            
-        }
-         console.log(versObjektum);
-       
-     
-         for (let index = 0; index < versObjektum.length; index++) {
-             $(".elem h3").eq(index).html(versObjektum[index].cim);    
-             $(".elem p").eq(index).html(versObjektum[index].szerzo);
-             $(".elem p").eq(index).html(versObjektum[index].vers);    
-         }
-         document.getElementById("demo").innerHTML = versObjektum.cim + versObjektum.szerzo + versObjektum.vers;
-     });
+    szerzo:"<br>Keresztesi János",
+},
+    {
+    cim1: "Metró<br>",
+        
+    vers1: "Hát elkapott ma, kiscicám,<br> az ellenőr a metrón.<br> Nem volt érvényes matricám,<br> kívánom, bárha lett vón.<br> Leszállított – az alagút<br> most énelőttem ásít,<br> s eljutnom több mint bonyolult<br> a kívánt állomásig.<br> <br> S míg kattog egyre távolabb<br> haladva lent a metró,<br> halkan kattog a bőr alatt<br> az ember szíve dettó.<br>\n\t",
+        
+    szerzo1:"<br>Varró Dániel",
+    },
 
+    ];
+
+    const verselem='<div class="vers"> <h3></h3> <p></p> <p></p></div>';
+    const verselem1='<div class="vers1"> <h3></h3> <p></p> <p></p></div>';
+    $(function(){
+
+
+    
+        $("article").append(verselem); 
+        $("article").append(verselem1);         
+        
+        
+
+        console.log(versObjektum);
+
+        $("#show").click(function () {
+            
+          
+
+        for (let index = 0; index < versObjektum.length; index++) {
+            
+            $(".vers h3").eq(index).append(versObjektum[index].cim);    
+            $(".vers p").eq(index).append(versObjektum[index].vers);
+            $(".vers p").eq(index).append(versObjektum[index].szerzo);
+            $(".vers1 h3").eq(index).append(versObjektum[index].cim1);    
+            $(".vers1 p").eq(index).append(versObjektum[index].vers1);
+            $(".vers1 p").eq(index).append(versObjektum[index].szerzo1);
+        }
+        
+    });
+    });
