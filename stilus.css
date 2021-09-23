@@ -6,10 +6,22 @@ main {
 
 article {
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-gap:10px;
 }
 
+.versDiv {   
+    border: 1px solid black;
+    display: grid;
+   
+}
+
+.kepDiv {   
+    border: 1px solid black;
+    display: grid;
+   
+}
 
 li { 
     color: black;
@@ -20,23 +32,22 @@ li {
   color: black;
 }
 
-
-img {
-    max-width: 300px;
-}
-
-.vers {
+.vers{
     border: 1px solid black;
     margin: 10pt;
+
 }
+
+
+
 .vers1{
-    border: 1px solid black;
+border: 1px solid black;
     margin: 10pt;
+    
 }
 
-h3 {
-    color:brown;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 @media screen and (max-width:400px) {
